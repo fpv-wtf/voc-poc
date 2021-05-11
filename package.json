@@ -4,6 +4,7 @@
   "description": "DJI FPV Goggle USB Video Out",
   "main": "index.js",
   "dependencies": {
+    "chalk": "^4.1.1",
     "int-to-binary": "^1.0.2",
     "usb": "^1.7.1",
     "yargs": "^17.0.1"
