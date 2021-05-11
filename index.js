@@ -3,9 +3,6 @@ const yargs = require("yargs")
 const fs = require("fs")
 const chalk = require("chalk")
 
-// Sleepy time function
-const sleep = async (ms) => new Promise((resolve) => setTimeout(resolve, ms))
-
 const argv = yargs
   .option("f", {
     alias: "file",
@@ -38,22 +35,10 @@ const argv = yargs
   .help()
   .alias("help", "h").argv
 
-// Main logic, needs async capability to use promises correctly
-const mainFunction = async () => {
-  let goggles = usb.findByIds("0x2ca3", "0x1f")
+let goggles = usb.findByIds("0x2ca3", "0x1f")
 
-  while (!goggles) {
-    await sleep(2000)
-    console.log(
-      chalk.red(
-        "Goggles USB device not found. Please connect your goggles. ",
-        chalk.yellow("RETRY IN 2 SECONDS.")
-      )
-    )
-
-    goggles = usb.findByIds("0x2ca3", "0x1f")
-  }
-
+// When goggles are attached via USB
+usb.on("attach", (goggles) => {
   console.log(chalk.green("GOGGLES FOUND. ATTEMPTING TO CONNECT."))
 
   goggles.open()
@@ -120,7 +105,4 @@ const mainFunction = async () => {
   inpoint.addListener("error", (error) => console.error(error))
 
   inpoint.startPoll(argv.q, argv.s)
-}
-
-// Run the mainFunction
-mainFunction()
+})
