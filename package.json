@@ -1,0 +1,31 @@
+{
+  "name": "voc-poc",
+  "version": "1.0.0",
+  "description": "DJI FPV Goggle USB Video Out",
+  "main": "index.js",
+  "dependencies": {
+    "int-to-binary": "^1.0.2",
+    "usb": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fpv-wtf/voc-poc.git"
+  },
+  "keywords": [
+    "dji",
+    "fpv",
+    "goggles",
+    "video",
+    "stream"
+  ],
+  "author": "Joonas Trussmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fpv-wtf/voc-poc/issues"
+  },
+  "homepage": "https://github.com/fpv-wtf/voc-poc#readme"
+}
