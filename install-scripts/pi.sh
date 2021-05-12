@@ -11,8 +11,9 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs git
 git clone https://github.com/fpv-wtf/voc-poc.git
 cp -r voc-poc/* $targetdir/ # voc-poc expects /home/pi/index.js
-npm install
 sudo apt-get install -y libudev-dev
+npm install
+
 
 start
 
@@ -20,7 +21,7 @@ start
 
 function stop {
 
-if [[ $(ls $pidfile) ]]
+if [[ -e "$pidfile" ]]
     then
     kill $(cat $pidfile)
     rm $pidfile
@@ -35,7 +36,7 @@ fi
 
 function start {
 
-if [ $(ls $pidfile) ] && [ $(ps $(cat $pidfile) | egrep -v "PID") ]
+if [ -e "$pidfile" ] && [ $(ps $(cat $pidfile) | egrep -v "PID") ]
     then
     echo "VOC RUNNING PLEASE STOP PROCESS FIRST $0 stop"
 else
