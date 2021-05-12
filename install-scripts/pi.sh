@@ -73,7 +73,7 @@ if [ -e "$pidfile" ] && [ $(ps $(cat $pidfile) | egrep -v "PID") ]
     then
     echo "VOC RUNNING"
 else
-    if [[ $(ls $targetdir/index.js) ]]
+    if [[ -e "$targetdir/index.js" ]]
     then
         echo "VOC installed please run $0 start"
     else
