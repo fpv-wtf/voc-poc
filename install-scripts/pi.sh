@@ -10,11 +10,12 @@ sudo apt-get install -y ffmpeg curl
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs git
 git clone https://github.com/fpv-wtf/voc-poc.git
-cp -r voc-poc/* $targetdir/ # voc-poc expects /home/pi/index.js
 sudo apt-get install -y libudev-dev
+cp -r voc-poc/* $targetdir/ # voc-poc expects /home/pi/index.js
+cd $targetdir/
 npm install
 
-
+    
 start
 
 }
