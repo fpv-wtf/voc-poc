@@ -69,7 +69,7 @@ install
 ;;
 
 *)
-if [ $(ls $pidfile)] && [ $(ps $(cat $pidfile) | egrep -v "PID") ]
+if [ -e "$pidfile" ] && [ $(ps $(cat $pidfile) | egrep -v "PID") ]
     then
     echo "VOC RUNNING"
 else
