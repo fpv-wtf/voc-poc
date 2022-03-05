@@ -1,6 +1,14 @@
 # ¯\\\_(ツ)_/¯
 **voc-poc** is a proof of concept for video put from the DJI FPV Goggles over USB.
 
+## Community projects
+This proof of concept has lead to many awesome things:
+
+ - [WideFPV](https://widefpv.com/) - an awesome Chrome based webapp with local and RTMP streaming, DVR, clean HDMI out and more.
+ - [CosmoStreamer](https://cosmostreamer.com/products/djifpvgoggles/) - a paid, feature rich Raspberry PI image for HDMI out and streaming, including iOS support
+ - [DigiView-SBC](https://github.com/fpvout/DigiView-SBC) - an open source Raspberry PI image for your HDMI out needs
+ - [fpv-dvca](https://github.com/d4rken/fpv-dvca) - an open source Android app by d4rken, including DVR and VR mode
+ 
 # tl;dr;
 
 Install **nodejs** and the Javascript dependencies
