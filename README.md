@@ -34,6 +34,27 @@ If needed -o and -f may be combined.
 
 See `node index.js --help` for more options.
 
+## If you want to use C++ version
+
+**only tested in ubuntu!!**
+
+build the main.cpp with g++
+
+    g++ main.cpp -o voc-poc -lusb-1.0
+
+run the voc-poc
+
+    ./voc-poc
+
+the usage is same as nodejs version
+
+    ./voc-poc -o | ffplay -i - -analyzeduration 1 -probesize 32 -sync ext
+
+    ./voc-poc -o | ffmpeg -vcodec copy outfile.mp4 -i -
+
+    ./voc-poc -f outfile.bin
+
+
 ## Troubleshooting
 If you get USB errors on Windows make sure the Goggles Bulk Transfer Endpoint is using WinUSB drivers using [Zadiq](https://zadig.akeo.ie/).
 
@@ -68,7 +89,7 @@ In any case, ffmpeg and other an make sense of it.
  - Wait for Goggles to appear if not connected
  - Reconnect (and re send magic packet) when connection lost
  - Support multiple Goggles
- - Rewrite to C
+ - ~~Rewrite to C~~
 
 ## Why Nodejs?
 
