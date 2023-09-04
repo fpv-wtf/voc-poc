@@ -52,6 +52,13 @@ The data format is currently largely unknown:
 
 In any case, ffmpeg and other an make sense of it.
 
+## Other Implementations
+  - C: https://github.com/fpvout/fpvout-c
+  - C++: https://github.com/ZhaoGY-N/voc-poc/blob/master/main.cpp
+  - C++: https://github.com/fpvout/fpvout-cpp
+  - GO: https://github.com/fpvout/fpvout-go
+  - Javascript: https://github.com/fpvout/live.fpvout.com
+
 ## Todo
 ### Essential
 
@@ -68,7 +75,6 @@ In any case, ffmpeg and other an make sense of it.
  - Wait for Goggles to appear if not connected
  - Reconnect (and re send magic packet) when connection lost
  - Support multiple Goggles
- - Rewrite to C
 
 ## Why Nodejs?
 
